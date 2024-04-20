@@ -175,7 +175,6 @@ void uno_iter(int * col_ids, int * col_ptrs, int * col_to_row, int * row_to_col,
 		free(scc_ptrs); free(scc_nodes);
 		return;
 	}
-	// print_scc(scc_ptrs, scc_nodes, scc_count);
 	int * new_row_to_col = (int *) malloc(n * sizeof(int));
 	int * new_col_to_row = (int *) malloc(n * sizeof(int));
 	memcpy(new_row_to_col, row_to_col, n * sizeof(int));
@@ -205,7 +204,6 @@ void uno_iter(int * col_ids, int * col_ptrs, int * col_to_row, int * row_to_col,
 	int cycle_len;
 	find_cycle(col_ids, col_ptrs, col_to_row, row_to_col, inactive, del, cycle, &cycle_len, n,
                    start);
-	// print_cycle(cycle, cycle_len);
 	for(j=0; j<cycle_len; ++j)
 	{
 		if(j % 2 == 0)
