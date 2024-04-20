@@ -24,4 +24,4 @@ clean:
 	rm -rf $(TARGETS)
 
 run:
-	./uno
+	./test
